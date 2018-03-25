@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>跳坑中心</title>
+</head>
+<script language="JavaScript">
+    window.alert('小心地滑');
+    
+    function ShowTime(){
+    　document.getElementById('showbox').innerHTML = new Date();
+    　setTimeout('ShowTime()',1000);
+    }    
+</script>
+<style>
+    input[type=text], select {
+        position: absolute;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
+</style>
+<style type="text/css" media="all">
+    fieldset
+    {
+    width: 460px;
+    height: 350px;
+    }
+</style>
+<style type="text/css">
+    textarea {
+        resize: none;
+    }
+</style>
+<body onload="ShowTime()" alert('123')>
+<h1 align="center">全台最小的跳坑中心上線囉!</h1>
+<h5><div align="right" id="showbox"></div></h5>
+
+<form>
+    <p><b>Producer name : </b><input name="name" type="text" size="12"></p>
+    <p><b>Gender</b>
+    <input accesskey="M" name="sex" type="radio" value="male">Male
+    <input accesskey="F" name="sex" type="radio" value="female">Female</p>
+    <p><b>Interesting :</b>
+        <select id="interest" multiple size="1" onmousedown="if(this.options.length>1){this.size=3;}" onblur="this.size=1">
+            <option value="1">Dance</option>
+            <option value="2">Voice</option>
+            <option value="3">Songs</option>
+            <option value="4">Appearance</option>
+            <option value="5">Costume</option>
+        </select></p>
+        
+    <b>Group :</b>
+        <input name="Group" type="checkbox" value="IM">
+        <b onmouseover="document.getElementById('IMG').src='IM.jpg'" onmouseout="document.getElementById('IMG').src='SHOW.jpg'">Idolm@ster</b>
+        <input name="Group" type="checkbox" value="BG">
+        <b onmouseover="document.getElementById('IMG').src='BG.jpg'" onmouseout="document.getElementById('IMG').src='SHOW.jpg'">BangDream</b>
+        <input name="Group" type="checkbox" value="LL">
+        <b onmouseover="document.getElementById('IMG').src='LL.jpg'" onmouseout="document.getElementById('IMG').src='SHOW.jpg'">Lovelive</b>
+        <input name="Group" type="checkbox" value="FB">
+        <b onmouseover="document.getElementById('IMG').src='FB.jpg'" onmouseout="document.getElementById('IMG').src='SHOW.jpg'">FuckBoys</b>
+        <p></p>
+
+        <fieldset style="width:460">
+        <img id="IMG" src="SHOW.jpg" align="left" width="460" height="350">
+        </fieldset>
+        
+    <p><b>Suggestion to us:</b><br>
+    <textarea name="extra" rows="4" cols="50"></textarea></p>
+    <input type=submit value="Submit">
+	<input type=reset  value="Clear">
+</form>
+</body>
+</html>
